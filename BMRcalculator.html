@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BMR Calculator - HealthyChoice</title>
+        <link rel="stylesheet" type="text/css" href="templateGrid2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        
+        
+        </style>
+    </head>
+    <body>
+        
+            <header id="outer-menu">
+                    <div id="padd">
+                        <div id="one"><a id="siteName" href="HealthyChoice - Home.html">HealtyChoice</a></div>
+                        <div id="two">
+                            <div id="barsButton">
+                                <button onclick="showBarsContent()" id="bars"><i  class="fa fa-bars"></i></button>
+                                <div class="bars-content" id="contentHidden">
+                                    <a id="home" href="HealthyChoice - Home.html">Home</a>
+                                    <a id="carbs" href="Carbs.html">Carbohydrates</a>
+                                    <a id="proteins" href="Proteins.html">Proteins</a>
+                                    <a id="fats" href="Fats.html">Fats</a></li>
+                                    <a id="micro" href="Micronutrients.html">Micronutrients</a>
+                                    <div class="dropdownSmall">
+                                        <button onclick="myFunctionSmall()" class="dropbtnSmall">BMR <i class="fa fa-angle-right" style="font-size:15px;text-align:center;font-weight:bold"></i></button>
+                                        <div class="dropdown-contentSmall" id="drd-small">
+                                            <a href="BMR.html">What is BMR?</a>
+                                            <a href="BMRcalculator.html">BMR calculator</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav>
+                                <ul id="list">
+                                    <li><a id="home" href="HealthyChoice - Home.html">Home</a></li>
+                                    <li><a id="carbs" href="Carbs.html">Carbohydrates</a></li>
+                                    <li><a id="proteins" href="Proteins.html">Proteins</a></li>
+                                    <li><a id="fats" href="Fats.html">Fats</a></li>
+                                    <li><a id="micro" href="Micronutrients.html">Micronutrients</a></li>
+                                    <li class="dropdown">
+                                        <button onclick="myFunction()" class="dropbtn">BMR <i class="fa fa-angle-down" style="font-size:15px;text-align:center;font-weight:bold"></i></button>
+                                        <div class="dropdown-content" id="myDropdown">
+                                            <a class="content" href="BMR.html">What is BMR?</a>
+                                            <a class="content" href="BMRcalculator.html">BMR calculator</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+            </header>
+        <div id="grid-container">
+            <div id="title"><h1>BMR Calculator</h1></div>
+
+            <div id="main">
+                
+                <div id="calculator">
+                    <label id="title"><h3>Calculate you BMR</h3></label>
+                    <div id="pinkbox">
+                    <label> Gender:
+                        <select id="gender">
+                            <option value="" selected disabled hidden>Select</option>
+                            <option value="men">Men</option>
+                            <option value="women">Women</option>
+                        </select>
+                    </label>
+                    
+                    <label>Weight(kg):
+                        <input id="weight" type="text">
+                    </label>
+
+                    <label>Height(cm):
+                        <input id="height" type="text">
+                    </label>
+
+                    <label>Age:
+                        <input id="age" type="text">
+                    </label>
+
+                    <label>
+                        Level of activity:
+                        <select id="activity">
+                            <option value="" selected disabled hidden>Select</option>
+                            <option id="sed" value="sed">Sedentary</option>
+                            <option id="light" value="light">Lightly Active</option>
+                            <option id="mod" value="mod">Moderately Active</option>
+                            <option id="very" value="very">Very Active</option>
+                            <option id="extra" value="extra">Extra Active</option>
+                        </select>
+                    </label>
+
+                    <label>
+                    <button type="button" value="empty" id="button">Find my BMR</button>
+                    </label>
+                    </div>
+
+                    <label id="result">
+                        <h4 id="gross">Your BMR is: </h4>
+                        <h4 id="full">Daily calorie need based on activity level:  </h4>
+                    </label>
+                </div>
+                
+                
+                
+                
+                <table id="table">
+                    <thead>
+                        <th colspan="2">
+                            Find out your activity level
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sedentary</td>
+                            <td>Little or no exercise</td>
+                        </tr>
+                        <tr>
+                            <td>Lightly Active</td>
+                            <td>1-3 days of lightly exercise a week</td>
+                        </tr>
+                        <tr>
+                            <td>Moderately Active</td>
+                            <td>3-5 days of moderately exercise a week</td>
+                        </tr>
+                        <tr>
+                            <td>Very Active</td>
+                            <td>6-7 days of hard exercise a week</td>
+                        </tr>
+                        <tr>
+                            <td>Extra Active</td>
+                            <td>6-7 days of very hard exercise a week</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div id="obs">
+                <p style="text-align:center;"><strong>Before you start, make sure:</strong></p>
+                <ul>
+                    <li>You respect the given units</li>
+                    <li>You introduce positive numbers</li>
+                    <li>You know that the calculated calorie intake is needed for maintaining your current weight, not for losing weight. </li>
+                    <li>The value is obtained using the Harris-Benedict formula, whose variations you can check <a target="_break" href="https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation">here.</a></li>
+                </ul>
+                </div>
+            </div>
+                
+        
+        </div>
+    <script src="ButtonEvents.js"></script>   
+    <script>
+        var gender= document.getElementById("gender"); 
+        var weight= document.getElementById("weight");
+        var height= document.getElementById("height");
+        var age= document.getElementById("age");
+        var activity= document.getElementById("activity");
+        var grossResult= document.getElementById("gross");
+        var fullResult= document.getElementById("full");
+        var buttonEl= document.getElementById("button");
+
+        var buttonClicked = function() {
+            if (gender.value === "men") {
+                var BMR = 66 + weight.value*13.75 + height.value*5.003 - age.value*6.755;
+            }
+            else {
+                var BMR = 655 + weight.value*9.563 + height.value*1.850 - age.value*4.676;
+            }
+            grossResult.textContent = "Your BMR is: " + Math.round(BMR) +" kcal";
+            var full = BMR;
+            if (activity.value=="sed") { full *= 1.2; }
+            else if (activity.value=="light") { full *= 1.375; }
+            else if (activity.value=="mod") { full *= 1.55; }
+            else if (activity.value=="very") { full *= 1.725; }
+            else { full *= 1.9; }
+            fullResult.textContent = "Daily calorie need based on activity level: " + Math.round(full) + " kcal";
+        }
+
+        buttonEl.addEventListener("click",buttonClicked);
+
+
+    </script>
+    </body>
+</html>

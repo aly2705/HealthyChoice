@@ -1,0 +1,360 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    background-color: #d6bcae;
+    color: #122621;
+    font-family:  'Segoe UI', Tahoma, Verdana, sans-serif;
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+/*header&grid properties (<768px & inherited for larger screens)*/
+#outer-menu {
+    position:fixed;
+    z-index:1;
+    width:100%;
+    height: 108.4px;
+    background-color:  #2f5056; 
+}
+#padd{
+    padding: 25px;
+    display: flex; 
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+}
+#siteName{
+    color:#c2c8c6; 
+    text-decoration: none; 
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;   
+}
+#siteName:hover{
+    color:  #d6bcae;
+}
+#one {
+    width:100%; 
+    flex: 0 1 350px;
+}
+#two {
+    width: 100%; 
+    text-align:right;
+    align-self:center;
+}
+/*dropdowns*/
+#barsButton {
+    
+    position: relative;
+    width:fit-content;
+    float:right;
+}
+#bars {
+    font-size:25px;
+    color:#d6bcae;
+    background-color: #2f5056;
+    border:none;
+    cursor: pointer;
+    
+}
+#bars:hover,#bars:focus {
+    outline:none;
+}
+.bars-content {
+    display:none;
+    position:absolute;
+    margin-left: -266px;
+    background-color:#d6bcae;
+    min-width:300px;
+    text-align:left;
+    z-index:1;
+    border-radius:5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#contentHidden a{
+    color:#122621;
+    padding: 15px 12px;
+    text-decoration: none;
+    display:block;
+    font-weight: 600;
+    font-size:18px;
+}
+#contentHidden a:hover {
+    background-color:#6b5b2f;
+    color:#d6bcae;
+}
+
+/*dropdown menu for bmr properties*/
+.dropbtnSmall:hover,.dropbtnSmall:focus{
+    background-color:#6b5b2f;
+    color:#d6bcae;
+    border:none;
+    outline: none;
+}
+
+.dropbtnSmall {
+    font-family:  'Segoe UI', Tahoma, Verdana, sans-serif;
+    border: none;
+    color:#122621;
+    background-color:#d6bcae;
+    padding: 15px 12px;
+    display:block;
+    font-weight: 600;
+    font-size:20px;
+    width:100%;
+    text-align:left;
+}
+.dropdownSmall {
+    position:relative;
+}
+.dropdown-contentSmall {
+    display: none;
+    position: absolute;
+    margin-left: 78px;
+    margin-top: -56.7px;
+    background-color: #c2c8c6;
+    min-width: 222px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#drd-small a {
+    color: #2f5056;
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    margin:0px;
+    text-align:start;
+}
+#drd-small a:hover {
+    background-color: #2f5056;
+    text-decoration:none;
+}
+
+.show {
+    display:block;
+}
+
+#dropdown:hover .dropbtn {text-decoration: underline;}
+
+#list {
+    display:none;
+}
+#grid-container {
+    position:absolute;
+    margin-top: 108.4px;
+    z-index:0;
+    display: grid;
+    height:100%; 
+    width:100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: 
+    "title"
+    "main"
+}
+
+/*title and main areas properties*/
+#title {
+    grid-area: title;
+    background-color:#c2c8c6;
+    text-align:center;    
+}
+#main {
+    grid-area:main;
+    padding: 25px;
+    background-color: #eae2d9;
+    color: #122621;
+    line-height: 1.6em;
+    box-sizing:content-box;
+}
+#img1 {
+    float: right;
+    margin:25px;
+}
+#img2 {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+p a{
+    color:#6b5b2f;
+    text-decoration: none;
+}
+p a:hover{
+    text-decoration: underline;
+}
+.advice {
+    font-weight: bold;
+    color: #6b5b2f;
+}
+table,th,td {
+    background-color: #c2c8c6;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+td {
+    background-color: #d6bcae;
+}   
+#calculator {
+    background-color: #d6bcae;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    width: 90%;
+    text-align: center;
+    margin: 15px 15px;
+}
+#table {
+    width:90%;
+    text-align: center;
+    margin: 15px 15px;
+}
+#calculator label {
+    display: block;
+    padding: 10px;
+}
+#calculator #title {
+    background-color:#c2c8c6;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#calculator #result {
+    background-color:#c2c8c6;
+    margin: 0px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#obs {
+    width: 90%;
+    background-color:#c2c8c6;
+    border:2px solid black;
+    padding: 7px;
+    margin:15px 15px;
+    text-align:justify;
+
+}
+#obs ul {
+    padding-left:20px;
+    padding-right:20px;
+}
+#main a {
+    color:#6b5b2f;
+    text-decoration: none;
+}
+#main a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+    #grid-container {
+    position: absolute;
+    margin-top:108.4px;
+    z-index:0;
+    display: grid;
+    height:100%; 
+    width:100%;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: 
+    ". title ."
+    ". main ."
+    }
+    /*header area properties*/
+    #barsButton {
+        display:none;
+    }
+    #list {
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        list-style-type: none;
+    }
+    #list a {
+        text-decoration: none;
+        color:  #d6bcae;
+        margin-right: 10px;
+        font-size: 20px;
+        font-weight:600;
+    }
+    #list a:hover {
+        color:#eae2d9;
+        text-decoration: underline;
+    }
+    
+    /*dropdown menu for bmr properties*/
+    .dropbtn {
+        background-color:  #2f5056;
+        color:  #d6bcae;
+        font-size: 20px;
+        font-family:  'Segoe UI', Tahoma, Verdana, sans-serif;
+        font-weight: 600;
+        border: none;
+        width: fit-content;
+        padding:0px;
+    }
+    .dropdown {
+        position:relative;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        margin-top:0px;
+        margin-left: 0px;
+        background-color: #c2c8c6;
+        min-width: 130px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    #myDropdown a{
+        color: #2f5056;
+        padding: 12px 15px;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        margin:0px;
+        text-align:start;
+    }
+    #myDropdown a:hover {
+        background-color: #2f5056;
+        text-decoration:none;
+    }
+
+    .show {display: block;}
+
+    .dropdown:hover .dropbtn {text-decoration: underline;}
+
+    .dropbtn:hover,.dropbtn:focus {
+        outline:none;
+    }
+
+
+    /*main area width-changes for calculatorFile*/
+    #calculator {
+        width: 40%;
+        float:left;
+        margin: 0px;
+    }
+    #table{
+        width: 52%;
+        float:right;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    #obs {
+        width: 50%;
+        float:right;
+        margin: 0px;
+    }
+}
+
+
+
